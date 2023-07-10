@@ -142,3 +142,23 @@ nav .toggler {
 .heroBtnGroup .btn.btn-secondary:hover {
   background-color: var(--orangeColor);
 }
+.ScrollDown{
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    gap:0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.ScrollDown i{
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    padding: 0rem 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
