@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+:root {
+  --blueColor: #3ba9e6;
+  --orangeColor: #ffab12;
+}
+/* nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem max(2vw, 1rem);
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid white;
+}
+nav .navMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+}
+nav .navLogo {
+  font-weight: bold;
+  font-size: max(2vw, 1.2rem);
+}
+
+nav a:hover {
+  background: linear-gradient(
+    to right,
+    var(--blueColor) 20%,
+    var(--orangeColor) 30%,
+    var(--blueColor) 70%,
+    var(--orangeColor) 80%
+  );
+  background-size: 500% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #1e1e1e;
+  animation: textShine 2s ease-in-out infinite alternate;
+}
+nav .toggler {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+/* heroSection */
+.heroSection {
+  gap: 1rem;
+  background-color: #000000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heroSection h1 {
+  font-size: max(8vw, 2rem);
+  text-align: center;
+  text-transform: capitalize;
+  background: linear-gradient(
+    to right,
+    var(--blueColor) 20%,
+    var(--orangeColor) 30%,
+    var(--blueColor) 70%,
+    var(--orangeColor) 80%
+  );
+  background-size: 500% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #1e1e1e;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.heroBtnGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.heroBtnGroup .btn {
+  background-color: black;
+  color: white;
+  padding: 1rem 0.8rem;
+  font-size: max(1.4vw, 1rem);
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.heroBtnGroup span {
+  font-size: 2rem;
+  background: -webkit-linear-gradient(var(--blueColor), var(--orangeColor));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heroBtnGroup .btn.btn-primary:hover {
+  background-color: var(--blueColor);
+}
+.heroBtnGroup .btn.btn-primary {
+  box-shadow: 0px 0px 5px 2px var(--blueColor),
+    3px 3px 5px 2px var(--orangeColor);
+}
+.heroBtnGroup .btn.btn-secondary {
+  box-shadow: 0px 0px 5px 2px var(--orangeColor),
+    3px 3px 5px 2px var(--blueColor);
+}
+.heroBtnGroup .btn.btn-secondary:hover {
+  background-color: var(--orangeColor);
+}
