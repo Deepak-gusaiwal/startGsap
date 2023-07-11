@@ -31,7 +31,8 @@ nav {
   padding: 0.5rem max(2vw, 1rem);
   background-color: black;
   color: white;
-  position: fixed;
+  position: sticky;
+  z-index: 999;
   width: 100%;
   top: 0;
   left: 0;
@@ -75,12 +76,25 @@ nav .toggler {
 .heroSection {
   gap: 1rem;
   background-color: #000000;
-  height: 100vh;
+  height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
 }
+.heroSection img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  object-fit: contain;
+  z-index: -1;
+  transition: 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
 .heroSection h1 {
   font-size: max(8vw, 2rem);
   text-align: center;
@@ -107,6 +121,7 @@ nav .toggler {
     background-position: 100% 50%;
   }
 }
+
 .heroBtnGroup {
   display: flex;
   justify-content: center;
@@ -120,7 +135,7 @@ nav .toggler {
   font-size: max(1.4vw, 1rem);
   text-transform: uppercase;
   border-radius: 0.5rem;
-  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  /* transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955); */
 }
 .heroBtnGroup span {
   font-size: 2rem;
@@ -152,7 +167,8 @@ nav .toggler {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
+    bottom: 2rem;
 }
 .ScrollDown i{
     position: absolute;
