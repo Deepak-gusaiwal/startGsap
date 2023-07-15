@@ -178,3 +178,26 @@ nav .toggler {
     border-bottom-left-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
 }
+
+/* aboutSection */
+.aboutSection{
+  min-height: 100vh;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+width: 250px;
+height: 250px;
+max-width: 100%;
+background-color: royalblue;
+}
+/* servicesSection */
+.servicesSection{
+  min-height: 100vh;
+  background-color: rgb(255, 167, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

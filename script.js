@@ -61,3 +61,25 @@ navToggler.addEventListener('click',()=>{
     let barIcon = navToggler.querySelector('.fa-bars');
     barIcon.classList.toggle('dipslayNone');
 })
+
+// About Section gsap
+gsap.from('.aboutSection .box',{
+    scale:0,
+    rotate:270,
+    duration:2,
+    scrollTrigger:".aboutSection .box"
+})
+// servicesSection Section gsap
+gsap.from('.servicesSection .box',{
+    scale:0,
+    rotate:270,
+    duration:2,
+    scrollTrigger:{
+        trigger:".servicesSection .box",
+        scroller:"body",
+        markers:true,
+        start:"top 80%",
+        end:"top 50%",
+        scrub:2
+    }
+})
